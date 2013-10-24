@@ -8,7 +8,7 @@ var model = (function () {
 	}
 
 	return {
-		Question: Question,
+		Question: Question
 	};
 
 })(model||{})

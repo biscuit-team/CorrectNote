@@ -3,12 +3,7 @@
  */
 var DIP = (function () {
 	"use strict"
-	function Question() {
 
-	}
 
-	return {
-		Question: Question,
-	};
 
 })(DIP||{})
