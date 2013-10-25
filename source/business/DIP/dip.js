@@ -30,9 +30,6 @@ var DIP = (function (self) {
 	 */
 	self.get_select = function (content_type, img_url) {
 
-		/**
-		 * @type {HTMLCanvasElement}
-		 */
 		var canvas = _draw_to_canvas(img_url);
 		canvas.getContext('2d');
 
