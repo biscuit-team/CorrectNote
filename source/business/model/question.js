@@ -25,6 +25,7 @@ var model = (function (model, Content, Element) {
 
 		/**
 		 * @returns {Array}
+		 *
 		 */
 		get tags() {
 			return this._tags;
@@ -34,9 +35,7 @@ var model = (function (model, Content, Element) {
 		 */
 		set tags(tags) {
 			this._tags = tags;
-		},
-
-
+		}
 	}
 
 	model.Question = Question;
