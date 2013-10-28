@@ -42,12 +42,12 @@ var model = (function (self) {
 			o[index] = p[index];
 			var getter = p.__lookupGetter__(index);
 			if (typeof getter === 'function') {
-				o.__defineGetter__(index,getter);
+				o.__defineGetter__(index, getter);
 			}
 
 			var setter = p.__lookupSetter__(index);
 			if (typeof setter === 'function') {
-				o.__defineSetter__(index,setter);
+				o.__defineSetter__(index, setter);
 			}
 
 		}
