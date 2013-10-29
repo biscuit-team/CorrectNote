@@ -29,7 +29,7 @@ var model = (function (model) {
 		/**
 		 *
 		 * @returns {string}
-		 */
+		 */	
 		get type() {
 			return this._type;
 		},
@@ -45,12 +45,7 @@ var model = (function (model) {
 			return this._elements;
 		},
 		set value(value) {
-			this._value = model.setValue()
-			if (typeof value=== 'string') {
-				this._value = value;
-			} else {
-				throw "value must be an string!"
-			}
+			this._value = model.setValue('string',value);
 
 		},
 	}
