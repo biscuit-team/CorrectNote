@@ -1,9 +1,0 @@
-{
-	"name": "Correct Note",
-	"version": "0.0.1",
-	"type": "privileged",
-	"package": "edu.nju.software.biscuit",
-	"version_code": 1,
-	"minimum_runtime_version": "1.0.0",
-	"launch_url": "/view/index.html"
-}
