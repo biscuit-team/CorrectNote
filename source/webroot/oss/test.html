@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="put.php" method="post" enctype="multipart/form-data">
+	<input type="file" name="data" id="data"/>
+	<textarea name="data" id="base64"></textarea>
+	<input type="text" name="type" id="type" value="file"/>
+	<input type="submit"/>
+	<img src="../business/DIP/test/img/test.jpg" id="img"/>
+	<canvas id="canvas"></canvas>
+</form>
+<button onclick="sendBase64()">Click to send data</button>
+<script>
+
+	function sendBase64(){
+
+		var canvas = document.getElementById('canvas');
+		canvas.width = 300;
+		canvas.height = 200;
+		var c = canvas.getContext('2d');
+		c.drawImage(document.getElementById('img'),0,0);
+		var img = canvas.toDataURL('image/jpeg').split(',')[1];
+		//document.write(img);
+
+		var xh = new XMLHttpRequest();
+		xh.onreadystatechange = function(){
+			//document.write('<br>')
+			//document.write(xh.result);
+		};
+		xh.open('POST','put.php?type=base64');
+		xh.send(img)
+	}
+</script>
+</body>
+</html>
